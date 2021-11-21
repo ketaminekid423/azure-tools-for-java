@@ -10,6 +10,7 @@
     <extensions defaultExtensionNs="com.intellij">
         <applicationService serviceImplementation="com.microsoft.azure.toolkit.intellij.common.settings.IntellijStore"/>
         <preloadingActivity implementation="com.microsoft.azure.toolkit.intellij.common.preload.AzurePreloadingActivity"/>
+        <executionTargetType implementation="com.microsoft.azure.toolkit.intellij.common.runtarget.AzureCloudTargetType"/>
     </extensions>
     <actions>
         <action id="Actions.WhatsNew"
