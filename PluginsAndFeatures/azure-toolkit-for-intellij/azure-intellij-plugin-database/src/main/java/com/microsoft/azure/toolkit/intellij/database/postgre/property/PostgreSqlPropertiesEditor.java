@@ -191,7 +191,7 @@ public class PostgreSqlPropertiesEditor extends AzResourcePropertiesEditor<Postg
             properties.put("subscriptionId", subscriptionId);
             properties.put("allowAccessToLocal", String.valueOf(allowAccessToLocal));
             properties.put("allowAccessToAzureServices", String.valueOf(allowAccessToAzureServices));
-            AzureTelemetry.getActionContext().setProperties(properties);
+            AzureTelemetry.getContext().getActionParent().setProperties(properties);
         };
         AzureTaskManager.getInstance().runInBackground(new AzureTask<>(this.project, String.format("%s...", actionName), false, runnable));
     }
